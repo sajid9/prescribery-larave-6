@@ -13,7 +13,7 @@ class UserController extends Controller
         try{
 
             $users = User::all();
-            return response()->json(["status" => true, "data" => $users],200);
+            return response()->json(["status" => true, "users" => $users],200);
 
         }catch(\Exception $e){
 
