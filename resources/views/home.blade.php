@@ -42,10 +42,12 @@
         methods: {
             async getUsers(){
 
+                let self = this ;
+
                 await axios
                 .get('{{url("dashboard/getUsers")}}')
                 .then((response) => {
-                        this.users = response.data.data;
+                        self.users = response.data.data;
                     }).catch(error => {
                         this.error = true;
                         this.errorMsg = error.data.message;
