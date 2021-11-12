@@ -49,8 +49,8 @@
                 .then((response) => {
                         self.users = response.data.data;
                     }).catch(error => {
-                        this.error = true;
-                        this.errorMsg = error.data.message;
+                        self.error = true;
+                        self.errorMsg = error.data.message;
                     });
             }
         }
